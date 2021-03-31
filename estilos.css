@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+body {  /* Ponemos el mismo fondo en todas las ventanas */      
+	content: "";
+	background: url(imagenes/Toronto.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+a{ /* Color predeterminado para etiquetas "a" */
+	color: #040a41;
+}
+a:link { /* Vínculos */
+	color: #cabb33;
+	text-decoration:none; /* para que no subraye los vínculos */ 
+}
+a:hover {    /* indica el estilo cuando el cursor está sobre el elemento */ 
+	color: #b92929;
+}
+.menunav {    /* estilo para el menu de navegación */ 
+	width: 800px;  
+	margin: auto;
+}
+.botonMenu {      /* estilo para cada botón del menu de navegación */ 
+	font-family: 'Economica', sans-serif;;  /* Fuentes de Google */
+	font-size: 15px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: center;
+	width: 142px; 
+	background-image: url(imagenes/boton1.jpg);
+	padding:5px 10px 6px 8px;
+	float: left;
+	cursor: pointer;
+}
+.botonMenu:link {
+	color:#666666;
+	text-decoration: none;	/* para que no subraye los vínculos */ 
+	cursor: pointer;
+}
+.botonMenu:hover {  /* indica el estilo cuando el cursor está sobre el elemento */ 
+	color:#FFFFFF;
+	text-shadow: 1px 1px #000000;
+	background-image: none;	
+	background-color: #cabb33;
+	cursor:pointer;
+}   
+h1{     /* estilo para los titulares */ 
+	color: #cabb33; 
+	text-align: center;
+	font-family: 'New Tegomin', serif; /* Fuentes de Google */
+	font-size: 200px; 
+	font-weight: normal; 
+	line-height: 10px; 
+	margin: auto;
+} 
+h1:link {
+	color:#315e37;
+	cursor: pointer;
+	text-decoration: none;  /* para que no subraye los vínculos en los titulares*/ 
+}
+h2 {
+	color: #cabb33; 
+	padding: 1em 5px 1px 5px;
+	text-align: center;
+	font-family: 'Neucha', cursive;; /* Fuentes de Google */
+	font-size: 40px; 
+	font-weight: normal; 
+	line-height: 50px; 
+	margin: auto;
+}
+h3 {
+	color: #cabb33; 
+	padding: 1em 7em;
+	text-align: left;
+	font-family: 'Neucha', cursive; /* Fuentes de Google */
+	font-size: 40px; 
+	font-weight: normal; 
+	line-height: 50px; 
+	margin: auto;
+}
+h4 {
+	color: #292611; 
+	text-align: center;
+	font-family: 'Neucha', cursive; /* Fuentes de Google */
+	font-size: 30px; 
+	font-weight: normal; 
+	line-height: 50px; 
+	margin: auto;
+}
+h5 {
+	color: #292611; 
+	text-align: center;
+	font-family: 'Neucha', cursive; /* Fuentes de Google */
+	font-size: 30px; 
+	font-weight: normal; 
+	line-height: 270px; 
+	margin: auto;
+}
+.volver{ /* Para el botón de volver al inicio */
+	position: top;
+	text-align: top;
+	max-width:100px;
+	top: 100px;
+	margin:0;  
+	font-family: 'Amatic SC', cursive; /* Fuentes de Google */
+	font-size: 16px;
+	font-weight: normal;
+	color:#b39a2e;
+	text-shadow: 1px 1px #ffffff;
+}
+.volver:hover {
+	color:#ff0000;
+	text-shadow: 1px 1px #ffffff;
+	background-image: none;	
+	cursor:pointer;
+}   
+.parrafo { /* Estilo para los párrafos generales */
+	position:relative;
+	text-align: justify;
+	max-width:640px;
+	margin:auto;  /* margen igual a izquierda y derecha */
+	font-family: 'Open Sans Condensed', sans-serif;  
+	font-size: 20px;
+	font-weight: normal;
+	color:#000000;
+}
+.izquierda{ /* Parte izquierda al dividir la pantalla */
+	height: 100vh;
+	width: 50%;
+}
+.derecha{ /* Parte derecha al dividir la pantalla */
+	padding: 0px 20px;
+	background-size: cover;
+	background-position: center;
+	width: 50%;
+	height: 100vh;
+}
+#pantalla-dividida{ /* Permite poner un div al lado del otro */
+	display: flex;
+}
+.parrafo_izquierda { /* Estilo para los párrafos de la izquierda en pantalla dividida */
+	padding: 1em 3px 1px 5px;
+	position:relative;
+	text-align: justify;
+	width:500px;
+	height: 55vh;
+	margin:auto;  /* margen igual a izquierda y derecha */
+	font-family: 'Open Sans Condensed', sans-serif;  /* Fuentes de Google */
+	font-size: 28px;
+	font-weight: normal;
+	color:#000000;
+}
+.parrafo_img { /* Estilo para los párrafos en los contenedores */
+	padding: 1em 3px 1px 5px;
+	position:relative;
+	text-align: justify;
+	width:500px;
+	height: 55vh;
+	margin:auto;  /* margen igual a izquierda y derecha */
+	font-family: 'Open Sans Condensed', sans-serif;  
+	font-size: 28px;
+	font-weight: normal;
+	color:#ffffff;
+}
+.texto_figura{ /* Estilo para los párrafos de abajo de las imagenes */
+	position: relative;
+	max-width:600px;
+	margin:auto;  /* margen igual a izquierda y derecha */
+	font-family: 'Open Sans Condensed', sans-serif;  /* Fuentes de Google */
+	font-size: 15px;
+	font-weight: normal;
+	text-align:center;
+	color:#000000;
+}
+img{ /* Estilo para las imágenes */
+	padding: 4em 3px 10px 5px;
+	margin:auto;
+	position: relative;
+	align-self:auto;
+	display:block;
+}
+.container { /* Contenedor para la transición de texto sobre imagen */
+	position: relative;
+	width: 100%;
+  }
+.image { /* Hacer la imagen responsive */
+	width: 100%;
+	height: auto;
+}
+.overlay { /* Estilo para la animación del contenedor que aparece sobre la imagen */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #008CBA;
+	overflow: hidden;
+	width: 102%;
+	height: 86%;
+	transform: scale(0);
+	transition: .3s ease; /* Tiempo de duración de la transición */
+}
+.container:hover .overlay {/* Realizar el efecto overlay al pasar el mouse sobre la imagen */
+	transform: scale(1);
+}
+.text { /* Estilo para el div del texto dentro del contenedor */
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.linea-tiempo {/* Para crear la linea de tiempo se aplica un ancho de 500px, con un max-width de 95vw. */
+	padding-left: 400px;
+	position: relative;
+	width: 500px;
+	max-width: 95vw;
+	height: 100%;
+	font-family: Arial;
+} 
+.linea-tiempo::before { /* Se inserta contenido vacío que tiene un ancho de 3px, se posiciona al 50% del contenido y tiene fondo negro. */
+	content: '';
+	position: absolute;
+	width: 3px;
+	background-color: #000;
+	left: 72.25%;
+	height: 100%;
+	border-radius: 10px;
+}
+.momento { /* Se aplica un ancho del 45% para los momentos, se agrega un contenedor para el texto en forma de caja*/
+	position: relative;
+	width: 45%;
+	box-sizing: border-box;
+}
+.momento:nth-child(even) { /*Se posicionan los momentos pares (es decir, el 2do, 4to, 6to momento) a la derecha.*/
+	left: 55%;
+}
+  
+.momento::after { /* Se inserta contenido vacío de ancho 20px y altura 20px, con radio de borde del 50%, creando un círculo. Tiene fondo negro y se posiciona a la derecha de .momento. en el centro.*/
+	content: '';
+	position: absolute;
+	top: calc(50% + 10px);
+	right: calc(-11.11% - 11.5px);
+	height: 20px;
+	width: 20px;
+	background-color: #000;
+	border-radius: 50%;
+}
+  
+.momento:nth-child(even)::after { /*  Se posiciona a la izquierda de .momento*/
+	left: calc(-11.11% - 8.5px);
+}
+  
+.momento h3 { /* Estilo para un h3 dentro del momento*/
+	margin: 10px 0px;
+	font-size: 30px;
+	text-align: center;
+}
+.momento .descripcion { /* Estilo para la descripción del momento*/
+	background-color: #cabb33;
+	font-family: 'Open Sans Condensed', sans-serif;
+	border-radius: 20px;
+	padding: 10px;
+	line-height: 32px;
+	font-size: 20px;
+} 
+.momento .descripcion::after { /* Se inserta contenido vacío a la derecha de .descripción y centrado */
+	content: '';
+	position: absolute;
+	font-family: 'Open Sans Condensed', sans-serif; 
+	font-size: 40px;
+	right: -10px;
+	top: calc(50% + 10px);
+	height: 0;
+	width: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 12px solid #eee;
+}
+.momento:nth-child(even) .descripcion { /* A los momentos de la derecha, se les pone fondo celeste y letra blanca. */
+	background-color: #3393FE;
+	color: white;
+}  
+.momento:nth-child(even) .descripcion::after{ /* El contenido vacío, se coloca a la izquierda y de color celeste para los momentos de la derecha. */
+	left: -10px;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 12px solid #3393FE;
+	font-family: 'Open Sans Condensed', sans-serif; 
+	font-size: 40px;
+	border-left: none;
+}
