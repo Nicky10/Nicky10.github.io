@@ -278,7 +278,7 @@ img{ /* Estilo para las imágenes */
 	width: 0;
 	border-top: 10px solid transparent;
 	border-bottom: 10px solid transparent;
-	border-left: 12px solid #eee;
+	border-left: 12px solid #cabb33;
 }
 .momento:nth-child(even) .descripcion { /* A los momentos de la derecha, se les pone fondo celeste y letra blanca. */
 	background-color: #3393FE;
