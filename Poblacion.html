@@ -1,4 +1,5 @@
 <!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
 
 <head>
@@ -16,20 +17,29 @@
     <!-- Botón volver al inicio -->
     <p class="volver"><a href="index.html" target="_self"> ← Volver al inicio</a></p>
     <!-- Menú -->
-    <nav class="menunav" data-animation-type="lottie">
-        <a class="botonMenu" href="Ubicacion.html" target="_self">Ubicación</a>
-        <a class="botonMenu" href="Poblacion.html" target="_self">Población</a>
-        <a class="botonMenu" href="Actividades.html" target="_self">Actividades</a>
-        <a class="botonMenu" href="Historia.html" target="_self">Historia</a>
-        <a class="botonMenu" href="Referencias.html" target="_self">Referencias</a>
-        <br><br>
-    </nav>
+    <!-- Menú -->
+    <header>
+        <!-- el elemento header incluye el menu desplegable y el ícono que lo despliega -->
+        <input type="checkbox" id="btn-menu"><!-- checkbox permite la opción boleana -->
+        <label for="btn-menu"><img class="imgcheckbox" src="imagenes/menu.png" width="30px"></label>
+        <!-- la imagen del ícono se muestra como label del checkbox pero se oculta cuando no se necesita -->
+        <nav class="menu">
+            <ul>
+                <!-- los botones son elementos de una lista que define el menu pero mantiene el mismo diseño de cada botón, la posición de esta lista depende del estado del checkbox-->
+                <a class="botonMenu" href="Ubicacion.html" target="_self">Ubiación</a>
+                <a class="botonMenu" href="Poblacion.html" target="_self">Población</a>
+                <a class="botonMenu" href="Actividades.html" target="_self">Actividades</a>
+                <a class="botonMenu" href="Historia.html" target="_self">Historia</a>
+                <a class="botonMenu" href="Referencias.html" target="_self">Referencias</a>
+            </ul>
+        </nav>
+    </header>
     <!-- Dividir la pantalla en dos secciones -->
     <section id="pantalla-dividida">
         <!-- Parte izquierda -->
         <div class="izquierda">
             <h2>Estudiantes</h2>
-            <p class="parrafo_izquierda">
+            <p class="parrafo">
                 Estudiar en Toronto te coloca en uno de los centros urbanos más vibrantes y diversos del planeta.
                 Toronto se clasifica constantemente entre las ciudades con mejor calidad de vida del mundo y ofrece una
                 gran variedad de atracciones naturales y culturales. Casi cada fin de semana hay un festival o un evento
@@ -37,31 +47,38 @@
                 Toronto
                 <a a id="Ref3" href="Referencias.html#Ref3_"><sup>[3]</sup></a>.
             </p>
-            <img src="imagenes/Turistas.jpg" width="600px">
-            <p class="texto_figura">Recuperado de: <a
-                    href="https://lh3.googleusercontent.com/proxy/-7druN3svrmuAWwUnpPGaueDvo5kqYesGzNlyrlLmBptpK7PAFkxF15Y_LsB5Fnuyt14MhML22_Q1Axn3eVjueFdCU1oV-x1TY-A0toZLxexahICayMLZqGmAjuzHXBSiSgGsKCT6sKXEZj1kt2keYZO7N3i0lkz2MVHcp2w1STTdxvkhtUCp3Sjel_OSg"
-                    target="_blank">Latinos Magazine</a></p>
-            <h2>Residentes</h2>
-            <p class="parrafo_izquierda">
-                Canadá ha sido reconocido en el Segundo puesto de la Lista Internacional de los Mejores Países del Mundo
-                para vivir, por lo que muchas personas consideran que es un privilegio poder residir en Canadá a pesar
-                de que se pagan impuestos altos a nivel federal, provincial y municipal.<br>
-                Los residentes permanentes de la clase familiar constituyen el segundo grupo más grande de residentes
-                permanentes, y son personas que han sido patrocinadas para venir a Canadá. El resto de los residentes
-                permanentes son personas que han sido declaradas como refugiados por convención, así como también por
-                casos humanitarios y de compasión.
-                <a id="Ref4" href="Referencias.html#Ref4_"><sup>[4]</sup></a>.
-            </p>
         </div>
-        <!-- Parte derecha -->
         <div class="derecha">
-            <img src="imagenes/esudiantes.jpg" width="600px">
+            <img src="imagenes/esudiantes.jpg" width="100%">
             <p class="texto_figura">Recuperado de: <a
                     href="https://www.semana.com/resizer/N6B8SF681o-hfOU2ob3ZNiLQNfU=/1200x675/filters:format(jpg):quality(70)//cloudfront-us-east-1.images.arcpublishing.com/semana/AZ2ADLMVGBF2VAETDAAST7WHYM.jpg"
                     target="_blank">Semana.com</a></p>
+        </div>
+    </section>
+    <!-- Parte izquierda -->
+    <section id="pantalla-dividida">
+        <div class="izquierda">
+            <h2>Residentes</h2>
+            <p class="parrafo">
+                Los residentes permanentes de la clase familiar constituyen el segundo grupo más grande de residentes
+                permanentes, y son personas que han sido patrocinadas para venir a Canadá. El resto de los residentes
+                permanentes son personas que han sido declaradas como refugiados por convención, así como también por
+                casos humanitarios y de compasión
+                <a id="Ref4" href="Referencias.html#Ref4_"><sup>[4]</sup></a>.
+            </p>
+        </div>
+        <div class="derecha">
+            <img src="imagenes/Residencia.jpg" width="100%">
+            <p class="texto_figura">Recuperado de: <a
+                    href="https://lh3.googleusercontent.com/proxy/-7druN3svrmuAWwUnpPGaueDvo5kqYesGzNlyrlLmBptpK7PAFkxF15Y_LsB5Fnuyt14MhML22_Q1Axn3eVjueFdCU1oV-x1TY-A0toZLxexahICayMLZqGmAjuzHXBSiSgGsKCT6sKXEZj1kt2keYZO7N3i0lkz2MVHcp2w1STTdxvkhtUCp3Sjel_OSg"
+                    target="_blank">Latinos Magazine</a></p>
+        </div>
+    </section>
 
+    <section id="pantalla-dividida">
+        <div class="derecha">
             <h2>Turistas</h2>
-            <p class="parrafo_izquierda">
+            <p class="parrafo">
                 Canadá es conocido a nivel internacional como un objetivo turístico debido a sus bellos paisajes y
                 sitios de interés. En los últimos años se ha posicionado como uno de los principales países para buscar
                 una
@@ -69,13 +86,15 @@
                 particular
                 por encima de otras ciudades del mundo, actualmente cuenta con diferentes oportunidades que llaman la
                 atención de ciudadanos extranjeros como destino turístico.</p>
-            <br><br>
-            <img src="imagenes/Residencia.jpg" width="600px">
+        </div>
+        <div class="derecha">
+            <img src="imagenes/Turistas.jpg" width="100%">
             <p class="texto_figura">Recuperado de: <a
                     href="https://lh3.googleusercontent.com/proxy/vSSPPGmfKYjkem3uyLsjHsJj3pbpV0-lym5cArxCNp4hvKGbvOcpUH1nS29MD9w6f9BwrpbeK-W_uwZ0SRjHNZFMuOVq95SIQvxQV7RZJZ3x8xa0hUEjKJLfW2FI2KtDUWSNrg"
                     target="_blank">Latinos Magazine</a></p>
         </div>
     </section>
+
 </body>
 
 </html>

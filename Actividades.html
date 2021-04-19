@@ -1,4 +1,5 @@
 <!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
 
 <head>
@@ -7,7 +8,7 @@
     <title>Toronto</title>
     <link href="estilos.css" rel="stylesheet" type="text/css">
     <!-- Importar las fuentes de Google -->
-    <style> 
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Economica:wght@700&family=Neucha&family=New+Tegomin&family=Open+Sans+Condensed:wght@300&display=swap');
     </style>
 </head>
@@ -16,21 +17,30 @@
     <!-- Botón de volver al inicio -->
     <p class="volver"><a href="index.html" target="_self"> ← Volver al inicio</a></p>
     <!-- Menú -->
-    <nav class="menunav">
-        <a class="botonMenu" href="Ubicacion.html" target="_self">Ubicación</a>
-        <a class="botonMenu" href="Poblacion.html" target="_self">Población</a>
-        <a class="botonMenu" href="Actividades.html" target="_self">Actividades</a>
-        <a class="botonMenu" href="Historia.html" target="_self">Historia</a>
-        <a class="botonMenu" href="Referencias.html" target="_self">Referencias</a>
-        <br><br>
-    </nav>
+    <!-- Menú -->
+    <header>
+        <!-- el elemento header incluye el menu desplegable y el ícono que lo despliega -->
+        <input type="checkbox" id="btn-menu"><!-- checkbox permite la opción boleana -->
+        <label for="btn-menu"><img class="imgcheckbox" src="imagenes/menu.png" width="30px"></label>
+        <!-- la imagen del ícono se muestra como label del checkbox pero se oculta cuando no se necesita -->
+        <nav class="menu">
+            <ul>
+                <!-- los botones son elementos de una lista que define el menu pero mantiene el mismo diseño de cada botón, la posición de esta lista depende del estado del checkbox-->
+                <a class="botonMenu" href="Ubicacion.html" target="_self">Ubiación</a>
+                <a class="botonMenu" href="Poblacion.html" target="_self">Población</a>
+                <a class="botonMenu" href="Actividades.html" target="_self">Actividades</a>
+                <a class="botonMenu" href="Historia.html" target="_self">Historia</a>
+                <a class="botonMenu" href="Referencias.html" target="_self">Referencias</a>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Seccionar la pantalla en 2 -->
     <section id="pantalla-dividida">
         <!-- Contenedores Parte Izquierda -->
         <div class="izquierda">
-            <div id="Act1" class="container">
-                <img src="imagenes/CNTower.jpg" alt="Avatar" class="image" width="300px">
+            <div id="Act1" class="container" width="100%">
+                <img src="imagenes/CNTower.jpg" alt="Avatar"  width="100%">
                 <div class="overlay">
                     <div class="text">
                         <h2>CN Tower</h2>
@@ -39,15 +49,15 @@
                             comunicación tiene una
                             altura de 553 metros, lo que la convierte en el segundo edificio más alto del
                             mundo.<br><br><br>
-                            Recuperado de <a
-                                href="Referencias.html#Act1_"
-                                target="_self">Global News</a>
+                            Recuperado de <a href="Referencias.html#Act1_" target="_self">Global News</a>
                         </p>
                     </div>
                 </div>
             </div>
-            <div id="Act2" class="container">
-                <img src="imagenes/stLawrence.jpg" alt="Avatar" class="image" width="300px">
+        </div>
+        <div class="derecha">
+            <div id="Act2" class="container"  width="100%">
+                <img src="imagenes/stLawrence.jpg" alt="Avatar"  width="100%">
                 <div class="overlay">
                     <div class="text">
                         <h2>Barrio St. Lawrence</h2>
@@ -56,53 +66,53 @@
                             sitios realmente históricos e interesantes como la catedral de San Miguel, el mercado de St.
                             Lawrence o el antiguo ayuntamiento.
                             <br><br>
-                            Recuperado de <a
-                                href="Referencias.html#Act2_"
-                                target="_self">Wikiwand</a>
+                            Recuperado de <a href="Referencias.html#Act2_" target="_self">Wikiwand</a>
                         </p>
                     </div>
                 </div>
             </div>
-            <div id="Act3" class="container">
-                <img src="imagenes/cataratas.jpg" alt="Avatar" class="image" width="300px">
+        </div>
+    </section>
+    <section id="pantalla-dividida">
+        <div class="izquierda">
+            <div id="Act3" class="container" width="100%">
+                <img src="imagenes/cataratas.jpg" alt="Avatar"  width="100%">
                 <div class="overlay">
                     <div class="text">
+                        <br><br>
                         <h2>Cataratas del Niagara</h2>
                         <p class="parrafo_img">
                             Este lugar predilecto que comparten Canadá y Estados Unidos se encuentra situado a las
                             afueras de Toronto, a unas dos horas de la ciudad.
                             <br><br><br>
-                            Recuperado de <a
-                                href="Referencias.html#Act3_"
-                                target="_self">GrowPro Experience</a>
+                            Recuperado de <a href="Referencias.html#Act3_" target="_self">GrowPro Experience</a>
                         </p>
                     </div>
                 </div>
             </div>
-
         </div>
-        <!-- Contenedores Parte Derecha -->
         <div class="derecha">
-            <div id="Act4" class="container">
-                <br><br>
-                <img src="imagenes/art.jpg" alt="Avatar" class="image" width="300px">
+            <div id="Act4" class="container" width="100%">
+                <img src="imagenes/art.jpg" alt="Avatar"  width="100%">
                 <div class="overlay">
                     <div class="text">
+                        <br><br>
                         <h2>Art Gallery of Ontario</h2>
                         <p class="parrafo_img">
                             Es un museo artístico que recoge una amplia colección de pinturas y esculturas de artistas
                             contemporáneos de América, Europa y África.
                             <br><br><br>
-                            Recuperado de <a
-                                href="Referencias.html#Act4_"
-                                target="_self">Art Gallery of Ontario</a>
+                            Recuperado de <a href="Referencias.html#Act4_" target="_self">Art Gallery of Ontario</a>
                         </p>
                     </div>
                 </div>
             </div>
-            <div id="Act5" class="container">
-                <br>
-                <img src="imagenes/cityhall.jpeg" alt="Avatar" class="image" width="300px">
+        </div>
+    </section>
+    <section id="pantalla-dividida">
+        <div class="izquierda">
+            <div id="Act5" class="container" width="100%">
+                <img src="imagenes/cityhall.jpeg" alt="Avatar"  width="100%">
                 <div class="overlay">
                     <div class="text">
                         <h2>City Hall Toronto</h2>
@@ -110,31 +120,32 @@
                             está compuesto por las calles principales de Queen Street, Dundas Square y Yonge Street,
                             ésta última, conocida por ser la calle más larga del mundo.
                             <br><br><br>
-                            Recuperado de <a href="Referencias.html#Act5_"
-                                target="_self">Bloomberg Cities</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div id="Act6" class="container">
-                <img src="imagenes/casaLoma.jpg" alt="Avatar" class="image" width="300px">
-                <div class="overlay">
-                    <div class="text">
-                        <h2>Casa Loma</h2>
-                        <p class="parrafo_img">
-                            Es una impresionante mansión con forma castillo que se construyó a finales del siglo XIX.
-                            En la actualidad está abierta a las
-                            visitas de los turistas y curiosos que quieran disfrutar de su arquitectura e historia.
-                            <br><br>
-                            Recuperado de <a
-                                href="Referencias.html#Act6_"
-                                target="_self">GetYourGuide</a>
+                            Recuperado de <a href="Referencias.html#Act5_" target="_self">Bloomberg Cities</a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
+            <div class="derecha">
+                <div id="Act6" class="container" width="100%">
+                    <img src="imagenes/casaLoma.jpg" alt="Avatar"  width="100%">
+                    <div class="overlay">
+                        <div class="text">
+                            <h2>Casa Loma</h2>
+                            <p class="parrafo_img">
+                                Es una impresionante mansión con forma castillo que se construyó a finales del siglo
+                                XIX.
+                                En la actualidad está abierta a las
+                                visitas de los turistas y curiosos que quieran disfrutar de su arquitectura e historia.
+                                <br><br>
+                                Recuperado de <a href="Referencias.html#Act6_" target="_self">GetYourGuide</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
 </body>
+
 </html>

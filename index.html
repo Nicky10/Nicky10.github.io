@@ -1,4 +1,5 @@
 <!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
     <meta charset="UTF-8">
@@ -14,21 +15,30 @@
 
 <body>
     <!-- Menú -->
-    <nav class="menunav">
-        <a class="botonMenu" href="Ubicacion.html" target="_self">Ubicación</a>
-        <a class="botonMenu" href="Poblacion.html" target="_self">Población</a> 
-        <a class="botonMenu" href="Actividades.html" target="_self">Actividades</a>
-        <a class="botonMenu" href="Historia.html" target="_self">Historia</a>
-        <a class="botonMenu" href="Referencias.html" target="_self">Referencias</a>
-    </nav>
-    <br>
+    <header>
+        <!-- el elemento header incluye el menu desplegable y el ícono que lo despliega -->
+        <input type="checkbox" id="btn-menu"><!-- checkbox permite la opción boleana -->
+        <label for="btn-menu"><img class="imgcheckbox" src="imagenes/menu.png" width="30px"></label>
+        <!-- la imagen del ícono se muestra como label del checkbox pero se oculta cuando no se necesita -->
+        <nav class="menu">
+            <ul>
+                <!-- los botones son elementos de una lista que define el menu pero mantiene el mismo diseño de cada botón, la posición de esta lista depende del estado del checkbox-->
+                <a class="botonMenu" href="Ubicacion.html" target="_self">Ubiación</a>
+                <a class="botonMenu" href="Poblacion.html" target="_self">Población</a>
+                <a class="botonMenu" href="Actividades.html" target="_self">Actividades</a>
+                <a class="botonMenu" href="Historia.html" target="_self">Historia</a>
+                <a class="botonMenu" href="Referencias.html" target="_self">Referencias</a>
+            </ul>
+        </nav>
+    </header>
     <h2>Razones para visitar </h2>
-    <br><br><br><br>
+    <br><br>
     <h1>TORONTO</h1>
     <br><br><br>
     <!-- Enlace a un video de YouTube -->
     <h2><a href="https://www.youtube.com/watch?v=eeubLHILz6o&t=0s" target="_blank">Click aquí para ver un video.</a>
     </h2>
+    <br><br><br>
     <h5>
         <!-- Enlace a la página de la asignatura -->
         Creado por Nicolás Delgado para la asignatura <a href="http://www.ventanagrafica.co/grafica/index.html" target="_blank" >Gráfica Interactiva</a>. Disponible en <a href="https://nicky10.github.io/" target="_blank" >GitHub</a>
