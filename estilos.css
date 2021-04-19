@@ -102,7 +102,13 @@ header label:hover {
     background-repeat: no-repeat;
     height: 30px;
     padding-top:6px;
-}   
+}  
+
+.imagen{ /*Estilo para el mapa de navegación*/
+	margin:auto;
+	position:relative;
+}
+
 h1{     /* estilo para los titulares */ 
 	color: #cabb33; 
 	text-align: center;
@@ -286,12 +292,12 @@ img{ /* Estilo para las imágenes */
 	text-align: center;
 }
 /*----------------------------------------------- linea de tiempo ----------------------------------------------------------------------------------*/
-.timeline{
+.timeline{ /*Ubicación de la linea de tiempo*/
 	margin-top: 40px;
 	margin-bottom: 40px;
 	position: relative;
 }
-.timeline:before{
+.timeline:before{/*Crea la linea del medio*/
 	content: '';
 	position: absolute;
 	left: 50%;
@@ -299,7 +305,7 @@ img{ /* Estilo para las imágenes */
 	height: 100%;
 	background: #6658ea
 }
-.content{
+.content{ /*Crea la caja en la que se encuentra el texto*/
 	 border: #6658ea 1px solid; 
 	 padding: 20px; 
 	 border-radius: 
@@ -307,8 +313,11 @@ img{ /* Estilo para las imágenes */
 	 color: royalblue;
 	 background-color: #508ca0;
 	}
-.timeline ul{ margin: 0; padding: 0}
-.timeline ul li{ 
+.timeline ul{  /*Propiedades de la lista de evenos*/
+	margin: 0; 
+	padding: 0
+}
+.timeline ul li{  /*Propiedades de cada evento*/
 	list-style: none;
 	position: relative;
 	width: 50%;
@@ -316,12 +325,12 @@ img{ /* Estilo para las imágenes */
 	box-sizing: border-box;
 }
 
-.timeline ul li:nth-child(odd){
+.timeline ul li:nth-child(odd){ /*Cuando es un elemento impar, lo pone a la izquierda*/
 	float: left;
 	text-align: right;
 	clear: both;
 }
-.timeline ul li:nth-child(odd)::before{
+.timeline ul li:nth-child(odd)::before{ /*Propiedades de los círculos que se encuentran sobre la linea*/
 	content: '';
 	position: absolute;
 	top: 40px;
@@ -332,7 +341,7 @@ img{ /* Estilo para las imágenes */
 	border: 2px solid #6658ea;
 	border-radius: 50%
 }
-.timeline ul li:nth-child(odd)::after{
+.timeline ul li:nth-child(odd)::after{ /*Crea el triangulo de cada evento que apunta hacia el círculo*/
 	content: '';
 	position: absolute;
 	border-style: solid;
@@ -344,14 +353,14 @@ img{ /* Estilo para las imágenes */
 	border-color: transparent transparent transparent #6658ea;
 }
 
-.timeline ul li:nth-child(even){
+.timeline ul li:nth-child(even){ /*Cuando el evento es impar se pone a la derecha*/
 	float: right;
 	text-align: left;
 	clear: both;
 }
 
 
-.timeline ul li:nth-child(even)::before{
+.timeline ul li:nth-child(even)::before{ /*Propiedades de los círculos que se encuentran sobre la linea*/
 	content: '';
 	position: absolute;
 	top: 40px;
@@ -362,7 +371,7 @@ img{ /* Estilo para las imágenes */
 	border: 2px solid #6658ea;
 	border-radius: 50%
 }
-.timeline ul li:nth-child(even)::after{
+.timeline ul li:nth-child(even)::after{ /*Crea el triangulo de cada evento que apunta hacia el círculo*/
 	content: '';
 	position: absolute;
 	border-style: solid;
@@ -389,20 +398,20 @@ img{ /* Estilo para las imágenes */
 	.linea-tiempo::before { /* Se inserta contenido vacío que tiene un ancho de 3px, se posiciona al 50% del contenido y tiene fondo negro. */
 		left: calc(60% + 3%);
 	}
-	.timeline:before{
+	.timeline:before{ /*Para mover la linea del medio cuando se reduce la ventana*/
 		left: 0%;
 	}
-	.timeline ul li{ 
+	.timeline ul li{  /*Cada elemento de la lista tendtrá un tamaño que ocupe el 100% del contenedor en el que se encuentra*/
 		width: 100%;
 	}
-	.timeline ul li:nth-child(odd){
+	.timeline ul li:nth-child(odd){ /*Para mover los eventos con la ventana*/
 		float: right;
 		text-align: left;
 	}
-	.timeline ul li:nth-child(odd)::before{
+	.timeline ul li:nth-child(odd)::before{/*Para mover los circulos con el evento*/
 		left: -10px;
 	}
-	.timeline ul li:nth-child(odd)::after{
+	.timeline ul li:nth-child(odd)::after{/*Para mover los triángulos con los círculos*/
 		left: 25px;
 		border-width: 10px 15px 10px 0px;
 		border-color: transparent #6658ea transparent transparent;
@@ -477,7 +486,6 @@ img{ /* Estilo para las imágenes */
 		width: 100%;
 		height: 100%;
 	}
-
 	.parrafo_img { /* Estilo para los párrafos en los contenedores */ 
 		margin-top: 20%;
 		font-size: 70%;
@@ -487,23 +495,5 @@ img{ /* Estilo para las imágenes */
 		width: 100%;
 		height: 100%;
 	  }
-	  .timeline:before{
-		left: 0%;
-	}
-	.timeline ul li{ 
-		width: 100%;
-	}
-	.timeline ul li:nth-child(odd){
-		float: right;
-		text-align: left;
-	}
-	.timeline ul li:nth-child(odd)::before{
-		left: -10px;
-	}
-	.timeline ul li:nth-child(odd)::after{
-		left: 25px;
-		border-width: 10px 15px 10px 0px;
-		border-color: transparent #6658ea transparent transparent;
-	}
 	
 }
