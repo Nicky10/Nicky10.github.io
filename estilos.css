@@ -29,13 +29,13 @@ a:hover {    /* indica el estilo cuando el cursor está sobre el elemento */
 }
 .botonMenu {      /* estilo para cada botón del menu de navegación */ 
 	font-family: 'Economica', sans-serif;;  /* Fuentes de Google */
-	font-size: 15px;
+	font-size: 20px;
 	font-style: normal;
 	font-weight: normal;
 	text-align: center;
 	width: 142px; 
 	background-image: url(imagenes/boton1.jpg);
-	padding:5px 10px 6px 8px;
+	padding:30px 10px 6px 8px;
 	float: left;
 	cursor: pointer;
 }
