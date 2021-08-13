@@ -8,6 +8,19 @@ body {  /* Ponemos el mismo fondo en todas las ventanas */
 	background-attachment: fixed;
 	background-size: cover;
 }
+
+:root { /* Variables */
+    /* Colores */
+    --ubicacion: #ad3640;
+    /* Tamaño de textos */
+    --button-font-size: 2.2rem;
+    --figcaption-font-size: 2.5rem;
+    --menu-button-width: 6.0rem;
+    --menu-button-height: 0.3rem;
+    --navmap-title-font-size: 1.3rem;
+    --navmap-close-font-size: 1.5rem;
+}
+
 section{
 	height: 10%;
 	width: 100%;
@@ -360,6 +373,50 @@ img{ /* Estilo para las imágenes */
 }
 
 
+#scroll {
+    bottom: 8.0rem;
+    right: -20%;
+}
+
+#scroll.active {
+    bottom: 7.0rem;
+    right: 4.0rem;
+    visibility: visible;
+    opacity: 1;
+}
+
+#scroll::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: calc(var(--menu-button-height)/2);
+    background: var(--fondo-top-bar);
+    transition: 0.1s;
+}
+
+#scroll::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: calc(var(--menu-button-height)/2);
+    background: var(--fondo-top-bar);
+    transition: 0.1s;
+}
+
+#scroll.active::before {
+    width: calc(var(--menu-button-width)/2.5);
+    height: var(--menu-button-height);
+    transform: translateY(calc(-1*var(--menu-button-width)/24)) translateX(calc(-0.65/5*var(--menu-button-width))) rotate(-45deg);
+}
+
+#scroll.active::after {
+    width: calc(var(--menu-button-width)/2.5);
+    height: var(--menu-button-height);
+    transform: translateY(calc(-1*var(--menu-button-width)/24)) translateX(calc(0.65/5*var(--menu-button-width))) rotate(45deg);
+}
+
 .timeline ul li:nth-child(even)::before{ /*Propiedades de los círculos que se encuentran sobre la linea*/
 	content: '';
 	position: absolute;
@@ -381,6 +438,237 @@ img{ /* Estilo para las imágenes */
 	left: 25px;
 	border-width: 10px 15px 10px 0px;
 	border-color: transparent #6658ea transparent transparent;
+}
+
+.new-border {
+    border-radius: 15px;
+}
+
+.figures-container figcaption-navmap {
+    padding: 5% 0% 5% 0%;
+    font-family: font-titles-navbar;
+    font-weight: lighter;
+    font-size: var(--figcaption-font-size);
+    color: var(--texto-top-bar);
+}
+
+/* Estilos para contenedor de mapa interactivo */
+
+.figures-container figcaption-navmap {
+    padding: 5% 0% 5% 0%;
+    font-family: font-titles-navbar;
+    font-weight: lighter;
+    font-size: var(--figcaption-font-size);
+    color: var(--texto-top-bar);
+}
+
+.figures-container map-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.figures-container map-container img {
+	height: auto;
+	width: 80%;
+}
+
+/* Ubicación de los botones del mapa interactivo */
+
+.durham {
+    position: absolute;
+    left: 74%;
+    top: 56%;
+    transform: translate(-50%, -50%);
+}
+
+.CT {
+    position: absolute;
+    left: 46%;
+    top: 74%;
+    transform: translate(-50%, -50%);
+}
+
+.peel {
+    position: absolute;
+    left: 28%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+}
+
+.hamilton {
+    position: absolute;
+    left: 25%;
+    top: 79%;
+    transform: translate(-50%, -50%);
+}
+
+.york {
+    position: absolute;
+    left: 55%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilo general para cada botón del mapa interactivo */
+
+.navmap-button {
+    width: calc(var(--menu-button-width)/5);
+    height: calc(var(--menu-button-width)/5);
+    border-radius: 60%;
+    background: var(--ubicacion);
+    transition: 0.8s;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+}
+
+.navmap-button::before {
+    content: "";
+    border-radius: 10%;
+    min-width: calc(var(--menu-button-width)/1.5);
+    min-height: calc(var(--menu-button-width)/1.5);
+    border: 3px solid var(--ubicacion);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 1s;
+}
+
+.navmap-button:hover, .navmap-button:focus {
+    color: #313133;
+    width: calc(var(--menu-button-width)/2);
+    height: calc(var(--menu-button-width)/2);
+}
+
+.navmap-button:hover::before, .navmap-button:focus::before {
+    opacity: 1;
+}
+
+.navmap-button::after {
+    content: '';
+    width: calc(var(--menu-button-width)/4);
+    height: calc(var(--menu-button-width)/4);
+    border-radius: 100%;
+    border: 3px solid var(--ubicacion);
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 2s infinite;
+}
+
+.navmap-button:hover::after, .navmap-button:focus::after {
+    animation: none;
+    display: none;
+}
+
+/* Parámetros para la animación del anillo que se desvanece */
+
+@keyframes ring {
+    0% {
+        width: calc(var(--menu-button-width)/2);
+        height: calc(var(--menu-button-width)/2);
+        opacity: 1;
+    }
+    100% {
+        width: calc(var(--menu-button-width)/5);
+        height: calc(var(--menu-button-width)/5);
+        opacity: 0;
+    }
+}
+
+/* Ventana emergente popup para mapa interactivo */
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.popup .popuptext {
+    position: absolute;
+    background-color: #555;
+    color: white;
+    text-align: center;
+    width: 200px;
+    margin-left: -100px;
+    border-radius: 6px;
+    padding: 20% 20%;
+    bottom: 100%;
+    left: 50%;
+    visibility: hidden;
+	z-index: 1;
+}
+
+.popup .popuptext h2 {
+    font-size: var(--navmap-title-font-size);
+}
+
+.popup .popuptext p {
+    font-family: font-titles-navbar;
+    font-size: var(--navmap-close-font-size);
+}
+
+.popup .popuptext img {
+    border-radius: 6px;
+    width: 95%;
+    height: auto;
+}
+
+/* Estilo para la flecha de la ventana emergente */
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    top: 100%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(117, 109, 109) transparent transparent transparent;
+}
+
+/* Estilo para mostrar/ocultar la ventana emergente */
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 2s;
+}
+
+/* Animación para desvanecer ventana emergente */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @media only screen and (max-width: 860px) {
@@ -416,6 +704,10 @@ img{ /* Estilo para las imágenes */
 		border-width: 10px 15px 10px 0px;
 		border-color: transparent #6658ea transparent transparent;
 	}
+	.figures-container map-container img {
+        height: auto;
+        width: 80%;
+    }
 	
 }
 
@@ -495,5 +787,11 @@ img{ /* Estilo para las imágenes */
 		width: 100%;
 		height: 100%;
 	  }
-	
+
+
+	.figures-container map-container img {
+        height: auto;
+        width: 80%;
+    }
+
 }

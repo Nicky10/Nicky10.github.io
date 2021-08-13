@@ -1,0 +1,115 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta lang="es">
+    <script src="js/navmap.js"></script>
+    <title>Toronto</title>
+    <link href="estilos.css" rel="stylesheet" type="text/css">
+    <!-- Importar las fuentes de Google -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Economica:wght@700&family=Neucha&family=New+Tegomin&family=Open+Sans+Condensed:wght@300&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <!-- Botón volver al inicio -->
+    <p class="volver"><a href="index.html" target="_self"> ← Volver al inicio</a></p>
+    <!-- Menú -->
+     <!-- Menú -->
+     <header>
+        <!-- el elemento header incluye el menu desplegable y el ícono que lo despliega -->
+        <input type="checkbox" id="btn-menu"><!-- checkbox permite la opción boleana -->
+        <label for="btn-menu"><img class="imgcheckbox" src="imagenes/menu.png" width="30px"></label>
+        <!-- la imagen del ícono se muestra como label del checkbox pero se oculta cuando no se necesita -->
+        <nav class="menu">
+            <ul>
+                <!-- los botones son elementos de una lista que define el menu pero mantiene el mismo diseño de cada botón, la posición de esta lista depende del estado del checkbox-->
+                <a class="botonMenu" href="Ubicacion.html" target="_self">Ubiación</a>
+                <a class="botonMenu" href="Mapa.html" target="_self">Mapa Interactivo</a>
+                <a class="botonMenu" href="Poblacion.html" target="_self">Población</a>
+                <a class="botonMenu" href="Actividades.html" target="_self">Actividades</a>
+                <a class="botonMenu" href="Historia.html" target="_self">Historia</a>
+                <a class="botonMenu" href="Referencias.html" target="_self">Referencias</a>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Fondo fijo con columna transparente que contiene el mapa interactivo-->
+
+        <div class="bg-ubicacion fixedbackground">
+
+            <div class="fillcolumn fillcolumn-center">
+
+                <div class="figures-container">
+                    <figure>
+                        <!-- Contenedor para mapa interactivo con imagen de fondo fija, botones interactivos
+                        y ventanas emergentes -->
+
+                        <map-container>
+
+                            <img class="new-border" src="Imagenes/Greater_toronto_area_map.svg" alt="Mapa Interactivo">
+
+                            <div class="peel navmap-button popup" onclick="btnPeel()">
+                                <div class="popuptext" id="btn-Peel">
+                                    <h2>PEEL</h2>
+                                   
+                                        <img src="Imagenes/peel.jpg">
+                                    </a>
+                                    <p>Pulse para cerrar</p>
+                                </div>
+                            </div>
+
+                            <div class="hamilton navmap-button popup" onclick="btnHamilton()">
+                                <div class="popuptext" id="btn-hamilton">
+                                    <h2>HALTON</h2>
+                                   
+                                        <img src="Imagenes/halton.jpg"></a>
+                                    <p>Pulse para cerrar</p>
+                                </div>
+                            </div>
+
+                            <div class="CT navmap-button popup" onclick="btnCT()">
+                                <div class="popuptext" id="btn-CT">
+                                    <h2>CITY OF TORONTO</h2>
+                                   
+                                        <img src="Imagenes/CT.jpg">
+                                    </a>
+                                    <p>Pulse para cerrar</p>
+                                </div>
+                            </div>
+
+                            <div class="durham navmap-button popup" onclick="btnDurham()">
+                                <div class="popuptext" id="btn-Durham">
+                                    <h2>DURHAM</h2>
+                                    <a>
+                                       
+                                        <img src="Imagenes/durham.jpg">
+                                    </a>
+                                    <p>Pulse para cerrar</p>
+                                </div>
+                            </div>
+
+                            <div class="york navmap-button popup" onclick="btnYork()">
+                                <div class="popuptext" id="btn-York">
+                                    <h2>YORK</h2>
+                                   
+                                        <img src="Imagenes/york.jpg">
+                                    </a>
+                                    <p>Pulse para cerrar</p>
+                                </div>
+                            </div>
+                            
+                        </map-container>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>
